@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
-if [ -e "$HOME/.docker" ]; then
+if find "$HOME/.docker" -type l 2>/dev/null | grep -q .; then
   echo "~/.docker has symlinks that block Bash-granting evals. Quit Docker, then: mv ~/.docker ~/.docker.off (restore after the run)." >&2
   exit 1
 fi

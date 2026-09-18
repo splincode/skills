@@ -1,0 +1,25 @@
+{
+  "name": "skills",
+  "version": "0.0.1",
+  "description": "Skills for Taiga UI",
+  "keywords": [
+    "skills",
+    "taiga",
+    "ui"
+  ],
+  "homepage": "https://github.com/taiga-family/skills#readme",
+  "bugs": {
+    "url": "https://github.com/taiga-family/skills/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taiga-family/skills.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "eval": "evals/run.sh"
+  }
+}

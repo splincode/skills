@@ -20,4 +20,16 @@ Skills are installed into your agent's skills directory and auto-trigger based o
 
 | Skill | Description |
 |---|---|
-| [tui-migration](./general/tui-migration/SKILL.md) | Safely resolve Taiga UI schematics migration TODOs without breaking behavior |
+| [tui-setup](tui-setup/SKILL.md) | Set up Taiga UI in an Angular project (`ng add taiga-ui`, root, styles, providers) |
+| [tui-migration](tui-migration/SKILL.md) | Safely resolve Taiga UI schematics migration TODOs without breaking behavior |
+
+## Evals
+
+Skills are checked with [`claude plugin eval`](https://code.claude.com/docs): each case in [`evals/`](evals) runs with and without the skill and compares scores.
+
+```bash
+npm run eval                              # full suite
+npm run eval -- --runs 1 --case '01*'     # single case, one run
+```
+
+A full run writes [`evals/report.html`](evals/report.html) — commit it; on merge to `main` it is published to [GitHub Pages](https://taiga-family.github.io/skills/). Filtered runs go to the ignored `evals/results/`.
